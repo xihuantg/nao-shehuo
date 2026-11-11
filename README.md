@@ -19,11 +19,14 @@ origin.html       源流：二墟 / 春祭 / 立碑 / 沿革 / 双村
 ritual.html       仪程：四段详解 / 五斗 / 三不骂 / 语言标本
 research.html     学理：脉络 / 五篇文献 / 概念 / 影像记录
 gallery.html      影像：图录 12 帧 / 灯箱 / 展陈模式
+practice.html     实践：到村 / 器物 / 传承人存照 / 校园复原 / 没拍到的
 visit.html        到访：何时 / 何地 / 礼仪 / 周边
 assets/css/main.css      全站样式（设计变量在最顶部）
 assets/js/main.js        导航、滚动动效、灯箱、展陈模式
 assets/js/exhibit-data.js  展陈模式的图片与解说词（改这里）
-assets/img/*.jpg         图片
+assets/img/field/        实践页照片：live-*（传承人存照）、team-*（团队自摄）
+assets/video/            实践页页头循环片：loop.mp4 / loop-sm.mp4 / poster.jpg
+assets/img/*.jpg         影像页的公开报道图
 ```
 
 ## 三、换成村里的实拍照片
@@ -47,8 +50,18 @@ assets/img/*.jpg         图片
 
 > 当前用的是公开报道配图（带「红星新闻」水印），**仅作占位**。正式提交前务必换成自己拍的，同时在 `gallery.html` 的「说明」段把来源改成「田野调查拍摄」，并在页脚补上摄影署名。
 
-## 四、改文字
+## 三之二、实践页的照片和视频
 
+这一页放的是**自己的东西**，和影像页分开：
+
+- `assets/img/field/live-*.jpg` —— 传承人提供的历年活动照片，8 张，按内容命名（羊皮袄 / 芯子 / 探马 / 牵牛 / 彩门 / 旗 / 花脸 / 杆上孩子）。加图就在 `practice.html` 的 `.gridgal` 里复制一个 `<figure>`。
+- `assets/img/field/team-*.jpg` —— 团队自摄：考察现场、试穿、道具、校园那一场。
+- `assets/video/loop.mp4` —— 页头 8 秒无声循环，960×544；`loop-sm.mp4` 是手机用的 540 宽版本；`poster.jpg` 是首帧。
+- 视频换法：把新的 mp4 覆盖 `loop.mp4` 与 `loop-sm.mp4`（后者压小），再截一张首帧存成 `poster.jpg`，尺寸 960×544 即可。手机端会自动选 `loop-sm.mp4`；开了「减弱动效」的系统只显示海报、不播视频。
+
+改文字时注意两处别写错：**我们没看过现场演出**（活动停办多年），看到的是场地、道具和传承人手机里的存照。
+
+## 四、改文字
 - 各页正文都在对应 `.html` 里，直接改中文即可。
 - 首页文献卡片只放了 3 篇，全文在 `research.html`。
 - 页脚「资料来源」是写死的四行，在 6 个页面里各有一处，改的时候搜「资料来源」。
